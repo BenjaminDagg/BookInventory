@@ -2,6 +2,7 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var app = express();
+var http = require('http').Server(app);
 
 var routes = require('./routes/routes');
 
@@ -24,6 +25,6 @@ app.get('*', (req,res) => {
   res.sendFile(path.join(__dirname + '/dist/book-inventory/index.html'));
 });
 
-app.listen(process.env.port || 8080,() => {
+http.listen(process.env.port || 8080,() => {
   console.log('server started');
 });
