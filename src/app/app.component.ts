@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {BookService} from '../services/book.service';
+import {Observable, of} from 'rxjs';
+import {BookListComponent} from '../components/book-list/book-list.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'book-inventory';
+
+  constructor(private bookService: BookService) {
+
+  }
+
+  ngOnInit() {
+
+
+  }
 }

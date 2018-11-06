@@ -1,0 +1,25 @@
+
+<div class="book-list">
+  <input class="search-input" placeholder="Search"  [(ngModel)]="query">
+  <div class="book-table">
+    <table>
+      <tr>
+        <td class="table-header">ID</td>
+        <td class="table-header">Title</td>
+        <td class="table-header">Author</td>
+        <td class="table-header">Publisher</td>
+        <td class="table-header">Price</td>
+      </tr>
+      <tr *ngFor="let book of filterBooks()">
+          <td>{{book.id}}</td>
+          <td>{{book.title}}</td>
+          <td>{{book.author}}</td>
+          <td>{{book.publisher}}</td>
+          <td>{{book.price}}$</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+

@@ -1,0 +1,37 @@
+.search-input {
+  margin: 0 auto;
+  position: relative;
+  width:200px;
+  height: 30px;
+  border: 2px solid dodgerblue;
+  border-radius: 4px;
+  font-size: 20px;
+
+}
+
+.book-list {
+  height: 100%;
+  width: 600px;
+  position:relative;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.table-header {
+  font-weight: bold;
+
+}
+
+td {
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+}
+
+tr {
+  margin-top:20px;
+}
+
+
