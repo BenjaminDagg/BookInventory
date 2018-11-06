@@ -18,7 +18,7 @@ app.use(routes);
 //app.use(routes);
 
 //static index file
-app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + '/dist/book-inventory'));
 
 //return index file
 
