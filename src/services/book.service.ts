@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable, of} from 'rxjs';
 import {Book} from '../models/Book';
 
 @Injectable({
@@ -17,7 +16,8 @@ export class BookService {
   Fetches all books from api
   returns observable that component subscribes to
    */
-  getBooks(): Observable<any> {
-    return this.http.get('/books');
+  getBooks() {
+    //return this.http.get('/books');
+    console.log('hi');
   }
 }

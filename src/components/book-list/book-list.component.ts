@@ -3,6 +3,7 @@ import {BookService} from '../../services/book.service';
 import {Input} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+
 @Component({
   selector: 'app-book-list',
   templateUrl: './book-list.component.html',
@@ -21,10 +22,7 @@ export class BookListComponent implements OnInit {
   ngOnInit() {
 
     var self = this;
-    this.bookService.getBooks()
-      .subscribe((books) => {
-        self.books = books;
-      });
+    this.bookService.getBooks();
   }
 
 
