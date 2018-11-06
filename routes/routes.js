@@ -5,8 +5,10 @@ const router = express.Router();
 
 const username = process.env.DB_USERNAME;
 const password = process.env.DB_PASSWORD;
-const dbUrl = username + ":" + password + process.env.DB_URL;
+const dbUrl = 'mongodb://' + username + ":" + password + process.env.DB_URL;
 
+
+console.log('username = ' + username + ' password = ' + password + ' url= '+dbUrl);
 var mongoClient = require('mongodb').MongoClient;
 //var dbUrl = 'mongodb://bdagg:myxboxname1996@ds153093.mlab.com:53093/bookinventory';
 mongoClient.connect(dbUrl, {useNewUrlParser:true}, function(err,client) {
