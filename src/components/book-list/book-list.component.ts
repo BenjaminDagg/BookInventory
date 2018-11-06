@@ -22,7 +22,10 @@ export class BookListComponent implements OnInit {
   ngOnInit() {
 
     var self = this;
-    this.bookService.getBooks();
+    this.bookService.getBooks()
+      .subscribe((books) => {
+        self.books = books;
+      });
   }
 
 

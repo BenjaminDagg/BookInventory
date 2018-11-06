@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Book} from '../models/Book';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn:'root',
@@ -16,8 +17,7 @@ export class BookService {
   Fetches all books from api
   returns observable that component subscribes to
    */
-  getBooks() {
-    //return this.http.get('/books');
-    console.log('hi');
+  getBooks(): Observable<any> {
+    return this.http.get('https://book-inventory.herokuapp.com/books');
   }
 }

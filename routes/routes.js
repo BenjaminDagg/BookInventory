@@ -26,10 +26,12 @@ const books = [
 
 var mongoClient = require('mongodb').MongoClient;
 var dbUrl = 'mongodb://bdagg:myxboxname1996@ds153093.mlab.com:53093/bookinventory';
-mongoClient.connect(dbUrl, {useNewUrlParser:true}, function(err,db) {
+mongoClient.connect(dbUrl, {useNewUrlParser:true}, function(err,client) {
   if (err) {
     console.log(err);
   }
+
+  var db = client.db('bookinventory');
 
   router.get('/books',(req,res) => {
     console.log('in books');
