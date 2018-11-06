@@ -25,6 +25,6 @@ app.get('*', (req,res) => {
   res.sendFile(path.join(__dirname + '/dist/book-inventory/index.html'));
 });
 
-http.listen(process.env.port || 8080,() => {
+http.listen(process.env.PORT || 8080,() => {
   console.log('server started');
 });
