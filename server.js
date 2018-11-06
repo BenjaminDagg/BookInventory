@@ -18,13 +18,15 @@ app.use(routes);
 //app.use(routes);
 
 //static index file
-app.use(express.static(__dirname + '/dist/book-inventory'));
+app.use(express.static(__dirname + '/dist'));
 
 //return index file
 
+/*
 app.get('*', (req,res) => {
   res.sendFile(path.join(__dirname + '/dist/book-inventory/index.html'));
 });
+*/
 
 
 app.listen(process.env.PORT || 8080,() => {
